@@ -8,6 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals -->
+    <!-- Application Structure Plan: A estrutura foi desenhada como uma página única (SPA) para facilitar a oração contínua, sem a necessidade de carregar novas páginas. O conteúdo de cada dia é carregado dinamicamente na área principal. A navegação por botões (Dia 1 a Dia 9) permite um acesso direto, mantendo o usuário focado na oração e meditação do dia, agora aprimorada com a integração de um player de música para ambientação. -->
+    <!-- Visualization & Content Choices: A aplicação é baseada em texto. A novidade é o uso de um iframe do Spotify, inserido após a oração inicial, para fornecer um ambiente de fundo musical durante a meditação, melhorando a experiência de imersão. A clareza e a legibilidade do texto continuam cruciais. Método: JavaScript puro para manipulação do DOM. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body {
             font-family: 'Lora', serif;
@@ -164,6 +168,10 @@
                 <h3>Oração Inicial</h3>
                 <p>Ó Trindade Santa, nós Vos agradecemos por ter dado à Igreja o Papa João Paulo II e por ter feito resplandecer nele a ternura da Vossa Paternidade, a glória da Cruz de Cristo e o esplendor do Espírito de amor. Concedei-nos, por sua intercessão, a graça que imploramos (<em>pedir a graça</em>), na esperança de que ele seja logo contado no número dos Vossos Santos. Amém.</p>
                 
+                <div class="my-4">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/4EeGaXDeDzwtDMbqkIcB9a?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                
                 <div class="my-6 p-4 bg-[#F5F5F5] rounded-lg border-l-4 border-[#A0C4FF]">
                     <h3 class="mt-0">Frase do Dia</h3>
                     <p class="text-lg italic">"${dayData.quote}"</p>
@@ -231,3 +239,4 @@ faze descer sobre todos nós a bênção de Deus!
 
 </body>
 </html>
+
